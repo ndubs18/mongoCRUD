@@ -10,7 +10,7 @@ MongoClient.connect('mongodb://localhost:27017/', (error, client) => {
 
     console.log('connected to the mongoDB servers');
 
-    const db = client.db('todos');
+    const db = client.db('TodoApp');
 
     db.collection('Users').insertOne({name: 'Thomas', age: 22, locations: 'Murray blvd'}).then((doc) => {
         console.log(doc.ops)

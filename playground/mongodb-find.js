@@ -9,9 +9,9 @@ MongoClient.connect('mongodb://localhost:27017/', (error, client) => {
     }
     console.log('connected to mongodb server...')
 
-    const db = client.db('todos');
+    const db = client.db('TodoApp');
 
-    db.collection('Users').find().toArray().then((docs) => {
+    db.collection('todos').find().toArray().then((docs) => {
         console.log(docs);
     }, (error) => {
         console.log();
